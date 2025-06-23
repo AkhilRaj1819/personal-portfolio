@@ -1,7 +1,8 @@
 import React from 'react'
 import {Sparkle} from 'lucide-react'
 import './Skill.css'
-const Skill = () => {
+import {motion} from 'framer-motion'
+const Skill = ({isDark}) => {
   const skills = [
     {
       name:'React',
@@ -85,46 +86,56 @@ const Skill = () => {
   ]
   return (
     <div>
-      <div className="flex justify-center">
-        <div className="flex flex-col justify-center   py-20">
+      <div className="flex flex-col lg:flex-row  border-b-2 border-[#e2e8f0]">
+        <motion.div className="flex flex-col justify-center px-20   py-20 lg:m-auto lg:px-0 lg:py-0"
+        initial={{opacity:0,x:-100}}
+        whileInView={{opacity:1,x:0}}
+        transition={{duration:1,ease:'easeOut'}}
+        viewport={{once:true}}
+        >
           <h1 className="flex text-[#30AF5B] ">
             <Sparkle color="#30AF5B" /> My Skills
           </h1>
+          <br />
           <span className="text-4xl font-bold">SKILLS</span>
           <p>
             I’ve honed a diverse set of design and development skills
             <br /> to craft functional, visually appealing, and user-first
             digital products.
           </p>
-        </div>
-        <div>
-          
-          <div className="flex flex-col h-[230px] w-[350px] overflow-y-auto scrollbar-hide  mt-[60px] mb-[60px] ml-[60px]"> <p className='text-center'>👇scroll👇</p>{
+        </motion.div>
+        <div className='lg:m-auto'>
+          <motion.div className="flex flex-col h-[250px] w-[350px] overflow-y-auto scrollbar-hide  mt-[60px] mb-[60px] m-auto  gap-4 "
+          initial={{opacity:0,x:100}}
+        whileInView={{opacity:1,x:0}}
+        transition={{duration:1,ease:'easeOut'}}
+        viewport={{once:true}}
 
-           
-           skills.map((skill) => (
-             <div className='flex flex-row'>
-              <div className='flex flex-col m-[auto]'>
-
-              <img
-                className="inline-flex w-auto h-[60px] m-[auto]"
-                src={skill.icon}
-                alt=""
-              />
+          >
+            {" "}
+            <p className="text-center">👇scroll👇</p>
+            {skills.map((skill) => (
+              <div className="flex flex-row ">
+                <div className="flex flex-col m-[auto] w-[130px]">
+                  <img
+                    className="inline-flex h-[60px] w-fit m-[auto]"
+                    src={skill.icon}
+                    alt=""
+                  />
+                </div>
+                <input
+                  type="range"
+                  min={0}
+                  max={100}
+                  value={75}
+                  readOnly
+                  className={`fixed-range w-[120%] h-2 bg-gray-300 rounded-full cursor-default m-[auto] appearance-none ${
+                    isDark ? "dark-page " : ""
+                  }`}
+                />
               </div>
-              <input
-                type="range"
-                min={0}
-                max={100}
-                value={75}
-                readOnly
-                className="fixed-range w-[120%] h-2 bg-gray-300 rounded-full cursor-default m-[auto] appearance-none"
-              /> 
-
-              
-            </div>
             ))}
-          </div> 
+          </motion.div>
         </div>
       </div>
     </div>

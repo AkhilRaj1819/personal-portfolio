@@ -3,7 +3,7 @@ import './Hero.css'
 import { ArrowRightIcon } from 'lucide-react';
 const Hero = ({isDark}) => {
   return (
-    <div className="w-full pt-[10vh] flex flex-col  lg:flex-row  items-center px-6 gap-6">
+    <div className="w-full pt-[20vh] flex flex-col  lg:flex-row  items-center px-6 gap-6">
       <div className="relative w-full lg:w-[40%] flex justify-center">
         <div className='relative w-fit'>
         <img

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes , Route } from 'react-router-dom'
-import Home from './components/Home'
+import Home from './Home'
 import Contact from './components/Contact'
 import About from './components/About'
 const Router = () => {
