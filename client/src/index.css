@@ -15,7 +15,9 @@
   line-height: normal;
 }
 
-
+*{
+  font-family: ClashDisplay;
+}
 
 body{
   background-color: #F7F8FC;

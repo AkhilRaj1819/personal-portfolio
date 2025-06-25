@@ -85,13 +85,13 @@ const Skill = ({isDark}) => {
     
   ]
   return (
-    <div>
-      <div className="flex flex-col lg:flex-row  border-b-2 border-[#e2e8f0]">
-        <motion.div className="flex flex-col justify-center px-20   py-20 lg:m-auto lg:px-0 lg:py-0"
+    <div className='lg:w-[90vw] w-[100vw]'>
+      <div className="flex flex-col lg:flex-row border-b-2 border-[#e2e8f0]">
+        <motion.div className="flex flex-col justify-center px-6 md:px-20 py-10 md:py-20 lg:m-auto lg:px-0 lg:py-0"
         initial={{opacity:0,x:-100}}
         whileInView={{opacity:1,x:0}}
         transition={{duration:1,ease:'easeOut'}}
-        viewport={{once:true}}
+       
         >
           <h1 className="flex text-[#30AF5B] ">
             <Sparkle color="#30AF5B" /> My Skills
@@ -105,11 +105,11 @@ const Skill = ({isDark}) => {
           </p>
         </motion.div>
         <div className='lg:m-auto'>
-          <motion.div className="flex flex-col h-[250px] w-[350px] overflow-y-auto scrollbar-hide  mt-[60px] mb-[60px] m-auto  gap-4 "
+          <motion.div className="flex flex-col h-[200px] md:h-[250px] w-[300px] md:w-[350px] overflow-y-auto scrollbar-hide mt-[30px] md:mt-[60px] mb-[30px] md:mb-[60px] m-auto gap-4 "
           initial={{opacity:0,x:100}}
         whileInView={{opacity:1,x:0}}
         transition={{duration:1,ease:'easeOut'}}
-        viewport={{once:true}}
+        
 
           >
             {" "}
@@ -129,7 +129,7 @@ const Skill = ({isDark}) => {
                   max={100}
                   value={75}
                   readOnly
-                  className={`fixed-range w-[120%] h-2 bg-gray-300 rounded-full cursor-default m-[auto] appearance-none ${
+                  className={`fixed-range w-full max-w-[250px] h-2 bg-gray-300 rounded-full cursor-default m-[auto] appearance-none ${
                     isDark ? "dark-page " : ""
                   }`}
                 />

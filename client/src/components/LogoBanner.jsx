@@ -76,12 +76,12 @@ const LogoBanner = ({isDark}) => {
 
 const duplicatedLogo = [...logos,...logos];
   return (
-    <div className="overflow-hidden w-full border-[#e2e8f0] border-y border-bg-700 py-sm ">
+    <div className="overflow-hidden border-[#e2e8f0] border-y border-bg-700 py-sm w-[100vw] ">
       <div className="flex flex-row gap-6 animate-scroll mt-5 mb-5 left-[]">
         {duplicatedLogo.map((logo, idx) => (
           <div
             key={idx}
-            className={`inline-flex items-center  rounded-full px-4 py-2 w-fit min-w-fit ${isDark?'bg-[#242424]':'bg-white'}`}
+            className={`inline-flex items-center  rounded-full px-4 py-2 w-fit min-w-fit ${isDark ? 'bg-[#242424]':'bg-white'}`}
           >
             <img className="w-[18px] h-auto mr-2" src={logo.link} alt={logo.name} />
             <p>{logo.name}</p>

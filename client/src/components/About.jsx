@@ -15,21 +15,18 @@ const About = () => {
     document.body.style.color = isDark ? '#F7F8FC' : '#000000';
   }, [isDark]);
   return (
-    <div>
-      <NavBar isDark={isDark} setIsDark={setIsDark} />
+    <div className=''>
+      <NavBar isDark={isDark} setIsDark={setIsDark}/>
       <Hero isDark={isDark}/>
-      <br /><br /><br /><br /><br />
+      <br /><br /><br /><br />
       <LogoBanner isDark={isDark}/>
+      
       <Skill isDark={isDark}/>
+      
       <Steps isDark={isDark}/>
       <Awards/>
       <Box isDark={isDark}/>
-      <div>
-
-      </div>
-      <footer>
-        <Footer/>
-      </footer>
+      <Footer></Footer>
     </div>
   )
 }

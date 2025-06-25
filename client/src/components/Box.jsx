@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 const Box = ({ isDark }) => {
   return (
     <div>
-      <div className="flex flex-col lg:px-20 py-20 justify-center items-center">
+      <div className="flex flex-col lg:px-20 lg:py-20 justify-center items-center">
         <motion.div
-          className={`flex flex-col justify-center items-center ${isDark ? 'bg-[#111116]' : 'bg-[#FFFFFF]'} w-[80vw] h-[50vh] rounded-4xl`}
+          className={`flex flex-col justify-center items-center ${isDark ? 'bg-[#111116]' : 'bg-[#FFFFFF]'} w-[80vw] min-h-[300px] lg:h-[50vh] rounded-4xl`}
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: 'easeOut' }}

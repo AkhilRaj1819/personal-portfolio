@@ -56,11 +56,7 @@ const Steps = ({isDark}) => {
       </motion.div>
 <span className='ml-6 lg:ml-40 '>Scroll👉</span>
       {/* Scrollable Cards on Mobile */}
-      <motion.div className="flex flex-row gap-6 overflow-x-auto scrollbar-hide mt-10 px-6 lg:px-0 lg:ml-[160px]"
-      initial={{opacity:0,x:100}}
-        whileInView={{opacity:1,x:0}}
-        transition={{duration:1,ease:'easeOut'}}
-      >
+      <motion.div className="flex flex-row gap-6 overflow-x-auto scrollbar-hide mt-10 px-6 lg:px-0 lg:ml-[160px]">
         
         {step.map((item) => (
           <div
