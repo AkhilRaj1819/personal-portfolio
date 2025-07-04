@@ -1,14 +1,15 @@
 import React from 'react'
 import './Hero.css'
 import { ArrowRightIcon } from 'lucide-react';
+import image from './image.jpg'
 const Hero = ({isDark}) => {
   return (
     <div className="w-full pt-[20vh] lg:w- flex flex-col  lg:flex-row  items-center px-6 gap-6">
       <div className="relative w-full lg:w-[40%] flex justify-center">
         <div className='relative w-fit'>
         <img
-          src="https://media.istockphoto.com/id/1682296067/photo/happy-studio-portrait-or-professional-man-real-estate-agent-or-asian-businessman-smile-for.jpg?s=612x612&w=0&k=20&c=9zbG2-9fl741fbTWw5fNgcEEe4ll-JegrGlQQ6m54rg="
-          className=" relative w-[250px] md:w-[300px] h-[auto] lg:w-[400px] rounded-b-[46%]"
+          src={image}
+          className=" relative w-[250px] md:w-[350px] h-[450px] lg:w-[400px] rounded-b-[46%]"
           alt="pic"
         />
       <div

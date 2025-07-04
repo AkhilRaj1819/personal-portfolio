@@ -7,9 +7,9 @@ const Hero1 = ({ isDark }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="px-4 lg:px-6 mt-[100px] w-full">
+    <div className="px-4 lg:px-6 mt-[130px] lg:mt-[210px] w-full">
       {/* Intro + Heading */}
-      <div className="flex flex-col lg:flex-row items-start lg:ml-[9%]">
+      <div className="flex flex-col lg:flex-row items-start ml-[9%] ">
         <div className="relative w-full">
           {/* Wave + Intro */}
           <span className="flex gap-2 text-[#30AF5B] mb-4 text-lg items-center">
@@ -19,7 +19,7 @@ const Hero1 = ({ isDark }) => {
             >
               <Hand />
             </motion.div>
-            Hey! It's me Akhil
+            Hey!<span className='text-[#000000]'>It's me Akhil</span>
           </span>
 
           {/* Main Heading */}

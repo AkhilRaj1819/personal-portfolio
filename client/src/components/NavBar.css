@@ -3,6 +3,7 @@ ul li {
   color: inherit;
   padding: 1px;
   font-family: 'ClashDisplay', sans-serif;
+  cursor: pointer;
 }
 
 ul li::after {
