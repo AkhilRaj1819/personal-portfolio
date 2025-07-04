@@ -9,7 +9,7 @@ const Hero = ({isDark}) => {
         <div className='relative w-fit'>
         <img
           src={image}
-          className=" relative w-[250px] md:w-[350px] h-[450px] lg:w-[400px] rounded-b-[46%]"
+          className=" relative w-[250px] md:w-[350px] h-[300px] lg:h-[450px] lg:w-[400px] rounded-b-[46%]"
           alt="pic"
         />
       <div
