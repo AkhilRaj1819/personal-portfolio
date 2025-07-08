@@ -8,12 +8,8 @@ import Steps from './Steps'
 import Awards from './Awards'
 import Box from './Box'
 import Footer from './Footer'
-const About = () => {
-  const [isDark, setIsDark] = useState(false);
-    useEffect(() => {
-    document.body.style.backgroundColor = isDark ? '#000000' : '#F7F8FC';
-    document.body.style.color = isDark ? '#F7F8FC' : '#000000';
-  }, [isDark]);
+const About = ({ isDark, setIsDark }) => {
+  
   return (
     <div className=''>
       <NavBar isDark={isDark} setIsDark={setIsDark}/>

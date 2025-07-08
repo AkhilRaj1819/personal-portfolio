@@ -4,12 +4,13 @@ import NavBar from './components/NavBar';
 import Hero1 from './components/Home/Hero1';
 import Banner from './components/Home/Banner';
 import AboutMe from './components/Home/AboutMe';
-const Home = () => {
-  const [isDark, setIsDark] = useState(false);
-      useEffect(() => {
-      document.body.style.backgroundColor = isDark ? '#000000' : '#F7F8FC';
-      document.body.style.color = isDark ? '#F7F8FC' : '#000000';
-    }, [isDark]);
+import Footer from './components/Footer';
+import Speciality from './components/Home/Speciality';
+import LogoBanner from './components/LogoBanner.jsx'
+import Box from './components/Box.jsx'
+
+const Home = ({ isDark, setIsDark }) => {
+ 
   return (
     <div>
       <NavBar isDark={isDark} setIsDark={setIsDark} /> 
@@ -19,8 +20,14 @@ const Home = () => {
        </div>
        <AboutMe></AboutMe>
       <div>
+        <Speciality  isDark={isDark}/>
         
       </div>
+      <LogoBanner isDark={isDark}></LogoBanner>
+      <Box isDark={isDark}></Box>
+      <footer>
+        <Footer></Footer>
+      </footer>
     </div>
   );
 };

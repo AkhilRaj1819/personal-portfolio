@@ -59,7 +59,7 @@ const Hero = ({isDark}) => {
           <br />
           focused websites that drive results and achieve business goals.
         </p>
-        <a href="/Vysyaraju Akhil Raju.pdf" download='Akhil_Resume.pdf'>
+        <a href="/Vysyaraju Akhil Raju.pdf" download='AKHIL RAJU VYSYARAJU.pdf'>
         <button
   className={`
     resume-button 

@@ -32,8 +32,8 @@ const NavBar = ({isDark,setIsDark}) => {
   };
   
   return (
-    <div className='fixed top-0 right-0 left-0 m-auto z-999  mt-[10px] items-center rounded-full shadow-gray-50 backdrop-blur-md  border border-white/20 '
-    style={{ width: getNavBarWidth()}}
+    <div className='fixed top-0 right-0 left-0 m-auto z-[9999] mt-[10px] items-center rounded-full shadow-gray-50 backdrop-blur-md border border-white/20'
+    style={{ width: getNavBarWidth() }}
     >
     <div className=' m-[5px]  max-w-[100vw]' >
           <ul className=' max-w-[80vw] flex items-center justify-between  rounded-full m-[auto] px-4 py-2 #F7F8FC'> 
@@ -42,7 +42,9 @@ const NavBar = ({isDark,setIsDark}) => {
             <div className='flex flex-row justify-center align-center space-x-6'>
             <li className={currentPath=='/' ? 'active' :''} onClick={()=>navigate('/')}>Home</li>
             <li className={currentPath=='/about' ? 'active' :''} onClick={()=>navigate('/about')}>About</li>
+            <li className={currentPath=='/projects' ? 'active' : ''} onClick={()=>navigate('/projects')}>Projects</li>
             <li className={currentPath=='/contact' ? 'active' :''} onClick={()=>navigate('/contact')}>Contact</li>
+
             </div>
             <span className='toogle' data-dark={isDark}  onClick={handleClick}>{isDark ? <Moon/>:<Sun/>}</span>
           </ul>

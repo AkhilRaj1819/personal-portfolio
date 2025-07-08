@@ -3,6 +3,12 @@ import { Hand, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
+const socialLinks = {
+  Linkedin: 'https://www.linkedin.com/in/akhil-vysyaraju-b14bb0319/',
+  Github: 'https://github.com/AkhilRaj1819',
+  Mail: 'https://mail.google.com/mail/?view=cm&fs=1&to=akhilrajuvysyaraju19@gmail.com',
+};
+
 const Hero1 = ({ isDark }) => {
   const navigate = useNavigate();
 
@@ -50,8 +56,16 @@ const Hero1 = ({ isDark }) => {
         <ul className="flex gap-6 text-sm sm:text-base lg:ml-[130px]">
           {['Linkedin', 'Github', 'Mail'].map((label, i) => (
             <li key={i} className="flex items-center gap-2 cursor-pointer hover:text-[#30AF5B] transition">
-              {label}
-              <ArrowRight size={17} className="transform rotate-[-30deg]" />
+              <a
+                href={socialLinks[label]}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+                onClick={e => e.stopPropagation()} // prevent bubbling if needed
+              >
+                {label}
+                <ArrowRight size={17} className="transform rotate-[-30deg]" />
+              </a>
             </li>
           ))}
         </ul>
